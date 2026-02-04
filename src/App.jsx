@@ -17,6 +17,7 @@ const filteredProjects = projects.filter((project) =>
     
       <div>
         <Header title="Personal Project Showcase App" />
+        <ProjectForm addProject={addProject} />
         <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
          <ProjectList projects={filteredProjects} />
         </div>

@@ -9,6 +9,10 @@ test("adds a project", () => {
     target: { value: "My Project" }
   });
 
+  fireEvent.change(screen.getByPlaceholderText(/project description/i), {
+    target: { value: "My Project Description" }
+  })
+  
   fireEvent.click(screen.getByText(/add project/i));
 
   expect(addProject).toHaveBeenCalled();
